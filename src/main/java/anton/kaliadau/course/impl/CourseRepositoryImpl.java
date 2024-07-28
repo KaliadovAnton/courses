@@ -17,19 +17,19 @@ import java.util.Optional;
 @Slf4j
 public class CourseRepositoryImpl implements CourseRepository {
 
-    private static final String SQL_SELECT_COURSES = """
+    private final String SQL_SELECT_COURSES = """
             SELECT * FROM course 
             LEFT JOIN course_student ON course.id = course_student.course_id 
             LEFT JOIN student ON student.id = course_student.student_id""";
-    private static final String SQL_SELECT_COURSE_BY_ID = """
+    private final String SQL_SELECT_COURSE_BY_ID = """
             SELECT * FROM course 
             LEFT JOIN course_student ON course.id = course_student.course_id 
             LEFT JOIN student ON student.id = course_student.student_id 
             WHERE course.id = ?""";
-    public static final String SQL_INSERT_COURSE = "INSERT INTO course(course_name) VALUES(?)";
-    public static final String SQL_DELETE_COURSE_BY_ID = "DELETE FROM course WHERE course.id = ?";
-    public static final String SQL_UPDATE_COURSE_NAME_BY_ID = "UPDATE course SET course_name = ? WHERE course.id = ?";
-    public static final String SQL_DELETE_ALL_COURSES = "TRUNCATE TABLE course CASCADE";
+    private final String SQL_INSERT_COURSE = "INSERT INTO course(course_name) VALUES(?)";
+    private final String SQL_DELETE_COURSE_BY_ID = "DELETE FROM course WHERE course.id = ?";
+    private final String SQL_UPDATE_COURSE_NAME_BY_ID = "UPDATE course SET course_name = ? WHERE course.id = ?";
+    private final String SQL_DELETE_ALL_COURSES = "TRUNCATE TABLE course CASCADE";
 
     @Override
     public Course save(String name) {

@@ -18,24 +18,24 @@ import java.util.Optional;
 @Slf4j
 public class StudentRepositoryImpl implements StudentRepository {
 
-    private static final String SQL_SELECT_STUDENTS = """
+    private final String SQL_SELECT_STUDENTS = """
             SELECT * FROM student 
             LEFT JOIN coordinator ON student.coordinator_id = coordinator.id 
             LEFT JOIN course_student ON student.id = course_student.student_id 
             LEFT JOIN course ON course.id = course_student.course_id;
             """;
-    private static final String SQL_SELECT_STUDENT = """
+    private final String SQL_SELECT_STUDENT = """
             SELECT * FROM student 
             LEFT JOIN coordinator ON student.coordinator_id = coordinator.id 
             LEFT JOIN course_student ON student.id = course_student.student_id 
             LEFT JOIN course ON course.id = course_student.course_id
             WHERE student.id = ?""";
-    public static final String SQL_INSERT_STUDENT = "INSERT INTO student(student_name) VALUES(?)";
-    public static final String SQL_DELETE_STUDENT_BY_ID = "DELETE FROM student WHERE student.id = ?";
-    public static final String SQL_UPDATE_STUDENT_NAME_BY_ID = "UPDATE student SET student_name = ? WHERE student.id = ?";
-    public static final String SQL_UPDATE_STUDENT_COORDINATOR_BY_ID = "UPDATE student SET coordinator_id = ? WHERE student.id = ?";
-    public static final String SQL_DELETE_ALL_STUDENTS = "TRUNCATE TABLE student CASCADE";
-    public static final String SQL_ADD_COURSE_TO_STUDENT = "INSERT INTO course_student(course_id, student_id) VALUES(?, ?)";
+    private final String SQL_INSERT_STUDENT = "INSERT INTO student(student_name) VALUES(?)";
+    private final String SQL_DELETE_STUDENT_BY_ID = "DELETE FROM student WHERE student.id = ?";
+    private final String SQL_UPDATE_STUDENT_NAME_BY_ID = "UPDATE student SET student_name = ? WHERE student.id = ?";
+    private final String SQL_UPDATE_STUDENT_COORDINATOR_BY_ID = "UPDATE student SET coordinator_id = ? WHERE student.id = ?";
+    private final String SQL_DELETE_ALL_STUDENTS = "TRUNCATE TABLE student CASCADE";
+    private final String SQL_ADD_COURSE_TO_STUDENT = "INSERT INTO course_student(course_id, student_id) VALUES(?, ?)";
 
 
     @Override

@@ -17,12 +17,12 @@ import java.util.Optional;
 @Slf4j
 public class CoordinatorRepositoryImpl implements CoordinatorRepository {
 
-    private static final String SQL_SELECT_COORDINATORS = "SELECT * FROM coordinator LEFT JOIN student ON student.coordinator_id = coordinator.id";
-    private static final String SQL_SELECT_COORDINATOR = "SELECT * FROM coordinator LEFT JOIN student ON student.coordinator_id = coordinator.id WHERE coordinator.id = ?";
-    public static final String SQL_DELETE_COORDINATOR_BY_ID = "DELETE FROM coordinator WHERE coordinator.id = ?";
-    public static final String SQL_INSERT_COORDINATOR = "INSERT INTO coordinator(coordinator_name) VALUES(?)";
-    public static final String SQL_UPDATE_COORDINATOR_NAME_BY_ID = "UPDATE coordinator SET coordinator_name = ? WHERE coordinator.id = ?";
-    public static final String SQL_DELETE_ALL_COORDINATORS = "TRUNCATE TABLE coordinator CASCADE";
+    private final String SQL_SELECT_COORDINATORS = "SELECT * FROM coordinator LEFT JOIN student ON student.coordinator_id = coordinator.id";
+    private final String SQL_SELECT_COORDINATOR = "SELECT * FROM coordinator LEFT JOIN student ON student.coordinator_id = coordinator.id WHERE coordinator.id = ?";
+    private final String SQL_DELETE_COORDINATOR_BY_ID = "DELETE FROM coordinator WHERE coordinator.id = ?";
+    private final String SQL_INSERT_COORDINATOR = "INSERT INTO coordinator(coordinator_name) VALUES(?)";
+    private final String SQL_UPDATE_COORDINATOR_NAME_BY_ID = "UPDATE coordinator SET coordinator_name = ? WHERE coordinator.id = ?";
+    private final String SQL_DELETE_ALL_COORDINATORS = "TRUNCATE TABLE coordinator CASCADE";
 
     @Override
     public Coordinator save(String coordinatorName) {

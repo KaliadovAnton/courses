@@ -1,8 +1,5 @@
 package anton.kaliadau.course.servlet;
 
-import anton.kaliadau.coordinator.CoordinatorMapper;
-import anton.kaliadau.coordinator.CoordinatorService;
-import anton.kaliadau.coordinator.impl.CoordinatorMapperImpl;
 import anton.kaliadau.course.CourseMapper;
 import anton.kaliadau.course.CourseService;
 import anton.kaliadau.course.impl.CourseMapperImpl;
