@@ -1,12 +1,7 @@
 package anton.kaliadau.student.servlet;
 
 import anton.kaliadau.AbstractUnitTest;
-import anton.kaliadau.coordinator.model.Coordinator;
 import anton.kaliadau.student.StudentService;
-import anton.kaliadau.student.model.Student;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,13 +13,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.io.PrintWriter;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;

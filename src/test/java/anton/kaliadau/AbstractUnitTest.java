@@ -19,7 +19,7 @@ public abstract class AbstractUnitTest {
     protected final RequestDispatcher dispatcher = mock(RequestDispatcher.class);
     protected final HttpServletRequest request = mock(HttpServletRequest.class);
     protected final HttpServletResponse response = mock(HttpServletResponse.class);
-    protected final PrintWriter writer = mock(PrintWriter .class);
+    protected final PrintWriter writer = mock(PrintWriter.class);
     protected final String coordinatorName = "New Coordinator";
     protected final Long coordinatorId = 1L;
     protected final Long studentId = 1L;
@@ -37,9 +37,9 @@ public abstract class AbstractUnitTest {
     protected final String PATH_TO_JSP_UPDATED = "/WEB-INF/object-updated.jsp";
     protected final String PATH_TO_JSP_DELETED = "/WEB-INF/object-deleted.jsp";
     protected final List<Student> students = List.of(new Student(1L, "Pippa Pipkin", null, null),
-                new Student(2L, "Maemi Tenma", null, null));
+            new Student(2L, "Maemi Tenma", null, null));
     protected final List<StudentDTO> studentsDTO = List.of(new StudentDTO("Pippa Pipkin", 1L, null),
-            new StudentDTO("Maemi Tenma", 2L,  null));
+            new StudentDTO("Maemi Tenma", 2L, null));
 
     protected final Course course = new Course(1L, "a", students);
     protected final Coordinator coordinator = new Coordinator(ID_LONG, "Sakana", List.of());

@@ -1,7 +1,7 @@
 package anton.kaliadau.student.impl;
 
-import anton.kaliadau.coordinator.impl.CoordinatorServiceImpl;
 import anton.kaliadau.AbstractIntegrationTest;
+import anton.kaliadau.coordinator.impl.CoordinatorServiceImpl;
 import anton.kaliadau.student.model.Student;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

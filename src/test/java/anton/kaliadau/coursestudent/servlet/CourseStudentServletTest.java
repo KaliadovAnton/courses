@@ -2,9 +2,6 @@ package anton.kaliadau.coursestudent.servlet;
 
 import anton.kaliadau.AbstractUnitTest;
 import anton.kaliadau.coursestudent.CourseStudentService;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

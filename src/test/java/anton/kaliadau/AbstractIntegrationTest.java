@@ -14,7 +14,7 @@ import org.testcontainers.utility.MountableFile;
 public class AbstractIntegrationTest {
 
     protected final String coordinatorName1 = "Sakana";
-    protected final String  coordinatorName2 = "Maemi Tenma";
+    protected final String coordinatorName2 = "Maemi Tenma";
     protected final String studentName1 = "Pippa Pipkin";
     protected final String studentName2 = "Lumi Kaneko";
     protected final String studentName3 = "Lumi Kaneko";
@@ -44,7 +44,7 @@ public class AbstractIntegrationTest {
                 .withCopyFileToContainer(
                         MountableFile.forClasspathResource(
                                 "init-db.sql"), "/docker-entrypoint-initdb.d/"
-                );;
+                );
         postgreDBContainer.start();
     }
 }

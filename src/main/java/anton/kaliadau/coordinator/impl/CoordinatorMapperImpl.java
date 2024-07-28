@@ -1,8 +1,8 @@
 package anton.kaliadau.coordinator.impl;
 
+import anton.kaliadau.coordinator.CoordinatorMapper;
 import anton.kaliadau.coordinator.model.Coordinator;
 import anton.kaliadau.coordinator.model.CoordinatorDTO;
-import anton.kaliadau.coordinator.CoordinatorMapper;
 import anton.kaliadau.student.model.Student;
 
 import java.util.List;

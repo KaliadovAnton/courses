@@ -2,8 +2,6 @@ package anton.kaliadau.student.servlet;
 
 import anton.kaliadau.AbstractUnitTest;
 import anton.kaliadau.student.StudentService;
-import anton.kaliadau.student.servlet.StudentRemovalServlet;
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;

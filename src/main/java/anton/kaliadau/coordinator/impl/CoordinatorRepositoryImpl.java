@@ -1,9 +1,9 @@
 package anton.kaliadau.coordinator.impl;
 
-import anton.kaliadau.util.DBConnector;
-import anton.kaliadau.coordinator.model.Coordinator;
 import anton.kaliadau.coordinator.CoordinatorRepository;
+import anton.kaliadau.coordinator.model.Coordinator;
 import anton.kaliadau.student.model.Student;
+import anton.kaliadau.util.DBConnector;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.ResultSet;

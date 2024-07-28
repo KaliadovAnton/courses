@@ -1,10 +1,9 @@
 package anton.kaliadau.course.servlet;
 
 import anton.kaliadau.AbstractUnitTest;
-import anton.kaliadau.course.model.Course;
 import anton.kaliadau.course.CourseService;
+import anton.kaliadau.course.model.Course;
 import lombok.SneakyThrows;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +17,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 

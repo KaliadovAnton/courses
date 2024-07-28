@@ -3,15 +3,11 @@ package anton.kaliadau.course.impl;
 
 import anton.kaliadau.AbstractUnitTest;
 import anton.kaliadau.course.CourseMapper;
-import anton.kaliadau.course.impl.CourseMapperImpl;
 import anton.kaliadau.course.model.Course;
 import anton.kaliadau.course.model.CourseDTO;
 import anton.kaliadau.student.StudentMapper;
 import anton.kaliadau.student.impl.StudentMapperImpl;
-import anton.kaliadau.student.model.Student;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

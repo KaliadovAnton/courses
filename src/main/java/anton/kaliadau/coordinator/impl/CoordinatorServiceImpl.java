@@ -1,9 +1,9 @@
 package anton.kaliadau.coordinator.impl;
 
-import anton.kaliadau.util.BeanFactory;
-import anton.kaliadau.coordinator.model.Coordinator;
 import anton.kaliadau.coordinator.CoordinatorRepository;
 import anton.kaliadau.coordinator.CoordinatorService;
+import anton.kaliadau.coordinator.model.Coordinator;
+import anton.kaliadau.util.BeanFactory;
 
 import java.util.List;
 

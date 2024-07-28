@@ -1,17 +1,13 @@
 package anton.kaliadau.course.impl;
 
 import anton.kaliadau.AbstractIntegrationTest;
-import anton.kaliadau.course.model.Course;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(MockitoExtension.class)
 class CourseServiceImplTest extends AbstractIntegrationTest {

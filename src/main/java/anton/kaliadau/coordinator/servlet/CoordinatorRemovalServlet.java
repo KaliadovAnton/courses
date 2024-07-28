@@ -1,7 +1,7 @@
 package anton.kaliadau.coordinator.servlet;
 
-import anton.kaliadau.util.BeanFactory;
 import anton.kaliadau.coordinator.CoordinatorService;
+import anton.kaliadau.util.BeanFactory;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

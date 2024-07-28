@@ -1,11 +1,11 @@
 package anton.kaliadau.student.impl;
 
+import anton.kaliadau.student.StudentMapper;
 import anton.kaliadau.student.model.Student;
 import anton.kaliadau.student.model.StudentDTO;
-import anton.kaliadau.student.StudentMapper;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StudentMapperImplTest {
 
