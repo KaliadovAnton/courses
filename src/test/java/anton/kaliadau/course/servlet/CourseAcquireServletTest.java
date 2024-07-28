@@ -23,7 +23,7 @@ class CourseAcquireServletTest extends AbstractUnitTest {
     @SneakyThrows
     void doGet() {
         //given: request with valid student id
-        var expectedJson = "{\"id\":1,\"name\":\"a\",\"students\":[{\"id\":1,\"name\":\"Pippa Pipkin\"},{\"id\":2,\"name\":\"Maemi Tenma\"}]}";
+        var expectedJson = "{\"id\":1,\"name\":\"a\",\"students\":[{\"name\":\"Pippa Pipkin\",\"id\":1,\"coordinator\":{}},{\"name\":\"Maemi Tenma\",\"id\":2,\"coordinator\":{}}]}";
         when(request.getParameter(ID)).thenReturn(ID_STRING);
         when(courseService.findById(ID_LONG)).thenReturn(course);
         when(response.getWriter()).thenReturn(writer);

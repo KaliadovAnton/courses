@@ -3,6 +3,7 @@ package anton.kaliadau;
 import anton.kaliadau.coordinator.model.Coordinator;
 import anton.kaliadau.course.model.Course;
 import anton.kaliadau.student.model.Student;
+import anton.kaliadau.student.model.StudentDTO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -37,6 +38,8 @@ public abstract class AbstractUnitTest {
     protected final String PATH_TO_JSP_DELETED = "/WEB-INF/object-deleted.jsp";
     protected final List<Student> students = List.of(new Student(1L, "Pippa Pipkin", null, null),
                 new Student(2L, "Maemi Tenma", null, null));
+    protected final List<StudentDTO> studentsDTO = List.of(new StudentDTO("Pippa Pipkin", 1L, null),
+            new StudentDTO("Maemi Tenma", 2L,  null));
 
     protected final Course course = new Course(1L, "a", students);
     protected final Coordinator coordinator = new Coordinator(ID_LONG, "Sakana", List.of());

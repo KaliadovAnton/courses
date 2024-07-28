@@ -75,7 +75,7 @@ public class CoordinatorRepositoryImpl implements CoordinatorRepository {
             var resultSet = preparedStatement.executeQuery();
             return getCoordinators(resultSet);
         } catch (SQLException e) {
-            log.error("Error while getting all students: {}", e.getMessage());
+            log.error("Error while getting all coordinators: {}", e.getMessage());
         }
         return List.of();
     }
@@ -87,7 +87,7 @@ public class CoordinatorRepositoryImpl implements CoordinatorRepository {
                      .prepareStatement(SQL_DELETE_ALL_COORDINATORS)) {
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            log.error("Error while deleting all students: {}", e.getMessage());
+            log.error("Error while deleting all coordinators: {}", e.getMessage());
         }
     }
 
@@ -102,7 +102,7 @@ public class CoordinatorRepositoryImpl implements CoordinatorRepository {
                 return Optional.of(getCoordinatorsWithStudents(resultSet));
             }
         } catch (SQLException e) {
-            log.error("Error while getting all students: {}", e.getMessage());
+            log.error("Error while getting all coordinator: {}", e.getMessage());
         }
         return Optional.empty();
     }

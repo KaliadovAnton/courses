@@ -35,8 +35,8 @@ public class CourseServletTest extends AbstractUnitTest {
     @DisplayName("Create a new course positive scenario")
     void doPost() {
         //given: new course with correct name to add to database
-        var course = Course.builder().id(ID_LONG).name(courseName).build();
-        var expectedJson = "{\"id\":" + ID_LONG + ",\"name\":\""+ courseName +"\"}";
+        var course = Course.builder().id(ID_LONG).name(courseName).students(List.of()).build();
+        var expectedJson = "{\"id\":1,\"name\":\"GO For Beginners.\",\"students\":[]}";
         when(request.getParameter("name")).thenReturn(courseName);
         when(response.getWriter()).thenReturn(writer);
         when(courseService.saveCourse(courseName)).thenReturn(course);
@@ -68,9 +68,9 @@ public class CourseServletTest extends AbstractUnitTest {
     @Test
     void doGet() {
         //given: there are several courses in the database
-        var courses = List.of(new Course(1L, "First course", null),
-                new Course(2L, "Second course", null));
-        var expectedJson = "[{\"id\":1,\"name\":\"First course\"},{\"id\":2,\"name\":\"Second course\"}]";
+        var courses = List.of(new Course(1L, "First course", List.of()),
+                new Course(2L, "Second course", List.of()));
+        var expectedJson = "[{\"id\":1,\"name\":\"First course\",\"students\":[]},{\"id\":2,\"name\":\"Second course\",\"students\":[]}]";
         when(courseService.findAll()).thenReturn(courses);
         when(response.getWriter()).thenReturn(writer);
 

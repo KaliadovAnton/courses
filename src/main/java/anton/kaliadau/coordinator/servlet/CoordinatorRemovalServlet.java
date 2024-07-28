@@ -28,20 +28,20 @@ public class CoordinatorRemovalServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.info("Student deletion procedure started");
+        log.info("Coordinator deletion procedure started");
         try {
             var coordinatorId = Long.parseLong(req.getParameter("id"));
             coordinatorService.deleteById(coordinatorId);
             resp.setStatus(200);
             var dispatcher = req.getRequestDispatcher("/WEB-INF/object-deleted.jsp");
             dispatcher.forward(req, resp);
-            log.info("Student deletion procedure finished successfully");
+            log.info("Coordinator deletion procedure finished successfully");
         } catch (NumberFormatException e) {
             resp.sendError(400);
-            log.info("Student deletion procedure finished with an exception");
+            log.info("Coordinator deletion procedure finished with an exception");
         } catch (NoSuchElementException e) {
             resp.sendError(404);
-            log.info("Student deletion procedure finished with an exception");
+            log.info("Coordinator deletion procedure finished with an exception");
         }
     }
 }

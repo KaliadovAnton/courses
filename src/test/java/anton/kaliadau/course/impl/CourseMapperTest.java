@@ -6,6 +6,8 @@ import anton.kaliadau.course.CourseMapper;
 import anton.kaliadau.course.impl.CourseMapperImpl;
 import anton.kaliadau.course.model.Course;
 import anton.kaliadau.course.model.CourseDTO;
+import anton.kaliadau.student.StudentMapper;
+import anton.kaliadau.student.impl.StudentMapperImpl;
 import anton.kaliadau.student.model.Student;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CourseMapperTest extends AbstractUnitTest {
 
     private final CourseMapper courseMapper = new CourseMapperImpl();
+    private final StudentMapper studentMapper = new StudentMapperImpl();
 
     @Test
     public void courseToCourseDTO() {
@@ -23,7 +26,9 @@ public class CourseMapperTest extends AbstractUnitTest {
         var expected = CourseDTO.builder()
                 .id(course.getId())
                 .name(course.getName())
-                .students(course.getStudents())
+                .students(course.getStudents().stream()
+                        .map(studentMapper::studentToStudentDTO)
+                        .toList())
                 .build();
         //when: mapped to dto
         var result = courseMapper.courseToCourseDTO(course);
@@ -37,8 +42,10 @@ public class CourseMapperTest extends AbstractUnitTest {
     @Test
     public void courseDTOtoCourse() {
         //given: valid courseDTO
-        var courseDTO = CourseDTO.builder().id(ID_LONG).name(newName).students(students).build();
-        var expected = new Course(courseDTO.getId(), courseDTO.getName(), courseDTO.getStudents());
+        var courseDTO = CourseDTO.builder().id(ID_LONG).name(newName).students(studentsDTO).build();
+        var expected = new Course(courseDTO.getId(), courseDTO.getName(), courseDTO.getStudents().stream()
+                .map(studentMapper::studentDTOtoStudent)
+                .toList());
 
         //when: mapped to entity
         var result = courseMapper.courseDTOtoCourse(courseDTO);
