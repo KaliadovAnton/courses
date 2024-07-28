@@ -6,7 +6,7 @@ import anton.kaliadau.student.StudentRepository;
 
 public class CourseStudentServiceImpl implements CourseStudentService {
 
-    private StudentRepository repository;
+    private final StudentRepository repository;
 
     public CourseStudentServiceImpl() {
         this.repository = BeanFactory.getStudentRepository();

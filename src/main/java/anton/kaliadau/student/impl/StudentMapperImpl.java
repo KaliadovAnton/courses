@@ -9,6 +9,7 @@ import anton.kaliadau.student.StudentMapper;
 public class StudentMapperImpl implements StudentMapper {
 
     private final CoordinatorMapper coordinatorMapper = new CoordinatorMapperImpl();
+
     @Override
     public Student studentDTOtoStudent(StudentDTO studentDto) {
         return Student.builder()

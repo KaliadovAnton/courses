@@ -5,5 +5,6 @@ import anton.kaliadau.course.model.CourseDTO;
 
 public interface CourseMapper {
     Course courseDTOtoCourse(CourseDTO dto);
+
     CourseDTO courseToCourseDTO(Course course);
 }

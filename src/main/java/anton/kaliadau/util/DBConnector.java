@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class DBConnector {
-    private static Properties props;
+    private static final Properties props;
     private static final String JDBC_URL = "jdbc.url";
     private static final String JDBC_NAME = "jdbc.username";
     private static final String JDBC_PASSWORD = "jdbc.password";
@@ -18,10 +18,10 @@ public class DBConnector {
         var rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
         var appConfigPath = rootPath + "database.properties";
         props = new Properties();
-            try {
-                props.load(new FileInputStream(appConfigPath));
-            } catch (IOException e) {
-                e.printStackTrace();
+        try {
+            props.load(new FileInputStream(appConfigPath));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

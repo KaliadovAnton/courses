@@ -29,7 +29,7 @@ public class CourseStudentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.info("Add a course to student procedure started");
         var courseId = Long.valueOf(req.getParameter("course_id"));
-        var studentId =  Long.valueOf(req.getParameter("student_id"));
+        var studentId = Long.valueOf(req.getParameter("student_id"));
         studentService.addCourseToStudent(studentId, courseId);
         var dispatcher = req.getRequestDispatcher("/WEB-INF/object-updated.jsp");
         dispatcher.forward(req, resp);

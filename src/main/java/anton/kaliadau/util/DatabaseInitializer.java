@@ -44,7 +44,7 @@ public class DatabaseInitializer implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         var connection = DBConnector.getConnection();
         try {
-            var statement= connection.createStatement();
+            var statement = connection.createStatement();
             statement.execute(SQL);
         } catch (SQLException e) {
             e.printStackTrace();
